@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,30,low,Camera trước có nhiều vật thể di chuyển, dễ quan sát, cần nhiều frame để đào tạo model.
-front,hard,20,high,Vật thể bị che khuất bởi xe phía trước, ánh sáng chói, hoặc ở rìa frame.
-rear,normal,25,low,Camera sau ít vật thể hơn, nhưng vẫn đủ để training.
-rear,hard,25,medium,Vật thể nhỏ/xa, bị méo do góc nhìn fisheye, hoặc che khuất bởi xe phía sau.
-left,normal,25,low,Camera trái capture xe/người từ bên trái, thường rõ ràng.
-left,hard,20,high,Che khuất bởi thân xe (ego body), ánh sáng thiếu, hoặc vật thể ở góc méo mạnh.
-right,normal,25,low,Camera phải capture vật thể từ bên phải, tương tự trái.
-right,hard,20,high,Che khuất bởi gương chiếu hậu, ánh sáng chói (nếu mặt trời ở bên phải), hoặc vật thể ở rìa frame.
+front,normal,30,low,Camera trước có nhiều vật thể di chuyển;dễ quan sát; cần nhiều frame để đào tạo model.
+front,hard,20,high,Vật thể bị che khuất bởi xe phía trước;ánh sáng chói hoặc ở rìa frame.
+rear,normal,25,low,Camera sau ít vật thể hơn nhưng vẫn đủ để training.
+rear,hard,25,medium,Vật thể nhỏ/xa; bị méo do góc nhìn fisheye hoặc che khuất bởi xe phía sau.
+left,normal,25,low,Camera trái capture xe/người từ bên trái thường rõ ràng.
+left,hard,20,high,Che khuất bởi thân xe (ego body); ánh sáng thiếu hoặc vật thể ở góc méo mạnh.
+right,normal,25,low,Camera phải capture vật thể từ bên phải; tương tự trái.
+right,hard,20,high,Che khuất bởi gương chiếu hậu; ánh sáng chói (nếu mặt trời ở bên phải) hoặc vật thể ở rìa frame.
