@@ -1,6 +1,7 @@
 # Sensor context
 
-- TODO — Rig: mô tả ngắn xe/camera gắn ở đâu theo hiểu biết của bạn từ ảnh (ADASIND không kèm tài liệu rig chi
-  tiết, ghi theo quan sát).
-- TODO — `ego_body` nhìn thấy ở đâu trong frame (góc capo, gương, tay lái...).
-- TODO — Vòng kính (lens circle) nằm ở vị trí nào trong ảnh, chiếm khoảng bao nhiêu phần khung hình.
+- **Rig:** Camera là **fisheye front-mounted** (gắn phía trước xe), thuộc bộ dữ liệu **ADASIND** (Singh, Biswas & Paul, CC BY 4.0). Camera ghi lại cảnh phát **trước xe** với góc nhìn **siêu rộng (≈180°–220°)**. Ảnh có đặc trưng **méo barrel (barrel distortion)** điển hình của lens fisheye, với đường chân trời cong lồi. Camera được lắp ở **đỉnh xe** (thường là trên gương chiếu hậu hoặc khẩu độ mái xe), chiều cao khoực 1.5–2m so với mặt đường. Là **một camera** (không phải bốn camera SVM), dùng cho bài lab giả lập.
+
+- **`ego_body` nhìn thấy ở đâu trong frame:** Thân xe (ego body) nhìn thấy ở **phía dưới cùng (bottom)** của khung hình, chiếm khoảng **5–15% chiều cao** của frame. Phần nhìn thấy bao gồm **capo (mũi xe)**, **cản trước**, **gương chiếu hậu trái/phải**, và đôi khi **tay lái** (nếu camera lắp thấp). Trong các frame như `adasind_006840.jpg` và `adasind_271039.jpg`, **không có ego body nhìn thấy** (do góc quay hoặc vị trí camera). Khi có, ego body thường xuất hiện dưới dạng **vùng màu tối/đen** (thân xe) ở đáy ảnh, cần được đánh dấu bằng `ignore_region` với `reason=ego_body`.
+
+- **Vòng kính (lens circle) nằm ở vị trí nào trong ảnh, chiếm khoảng bao nhiêu phần khung hình:** Vòng kính (lens circle) là **đường tròn ảo** bao quanh vùng hình ảnh hữu ích, là ranh giới giữa vùng hình ảnh và vùng đen (vô hiệu). Trong ảnh ADASIND, vòng kính chiếm **khoảng 70–80% diện tích khung hình** (đường kính ≈ 85–90% chiều rộng/cao của ảnh). Vị trí: **ở trung tâm** của khung hình (960×720), với **méo barrel rõ rệt** ở rìa (gần đường viền). Vùng ngoài vòng kính (nếu có) là **vùng đen** (không dữ liệu) và được đánh dấu sẵn bằng `ignore_region` với `reason=lens_border`.
