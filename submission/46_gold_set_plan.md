@@ -6,13 +6,30 @@ normal và hard slice. “Gold set” ở đây là **kế hoạch tạo** refer
 ADASIND hoặc nhãn bạn vừa vẽ. Nếu cần, dùng `notebooks/day11-svm360-colab.ipynb` để thử tổng phân bổ; notebook
 không làm thay phần lý do.
 
-| camera_id | Hard case cần chọn | Vì sao dễ sai | Annotation space / calibration cần giữ | Cách review trước khi gọi là gold |
-|---|---|---|---|---|
-| front | Đèn pha chói lóa ban đêm, xe cắt ngang đột ngột | Chói sáng làm mất viền, vận tốc góc cao gây motion blur | Fisheye gốc, thông số nội tại camera (intrinsics) | Double review độc lập từ 2 annotator kinh nghiệm + đối soát chéo của QA Lead |
-| rear | Điểm mù đuôi xe, lùi xe ban đêm, đèn pha rọi thẳng | Ánh sáng đèn xe sau làm lóa camera, khoảng cách gần dễ cắt box | Fisheye gốc kèm thông số vị trí gắn rig đuôi xe | Kiểm tra nghiêm ngặt thuộc tính `truncated` và `occluded` khi vật vào gần cản sau |
-| left | Vùng chồng seam góc trước trái và sau trái | Vật thể biến dạng mạnh ở biên thấu kính, dễ xuất hiện 2 lần trên 2 camera | Tọa độ camera extrinsics và thời gian đồng bộ frame (timestamps) | Review đồng thời cặp frame cùng timestamp của camera Front và Left |
-| right | Vỉa hè đông người đi bộ và chướng ngại vật tĩnh che khuất | Mật độ giao thông hỗn hợp cao, người đi bộ bị che bởi cây cối/cột điện | Fisheye gốc và mask vùng tĩnh của xe ego | Phân tích tách biệt người dắt xe và rider, kiểm tra kỹ checklist 9 mục |
+| camera_id | Hard case cần chọn                                                                                            | Vì sao dễ sai                                                                                                                                   | Annotation space / calibration cần giữ                                                                          | Cách review trước khi gọi là gold                                                                                                                                                     |
+| --------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| front     | Vật thể bị che khuất bởi xe phía trước; xe/người ở xa (khoảng 30–50m); ánh sáng chói từ phía trước (mặt trời) | Che khuất dẫn đến FN (False Negative) hoặc box sai kích thước; ánh sáng xấu gây khó khăn trong việc phân biệt class (ví dụ: xe đen vs bóng đổ). | Thông tin calibration (focal length, distortion coefficients), FOV, vị trí camera so với ego vehicle, timestamp | Review bằng **ít nhất 3 annotator độc lập**, so sánh với model đóng băng (IoU ≥ 0.7), kiểm tra consistency giữa các frame lân cận. Sử dụng overlay để xác nhận bounding box và class. |
+| rear      | Vật thể nhỏ (xe xa >50m); bị méo mạnh do góc nhìn fisheye; che khuất bởi xe phía sau                          | Vật thể xa bị bỏ sót (FN) do kích thước <40px; méo fisheye gây sai lệch hình dạng box.                                                          | Calibration (distortion parameters), FOV, độ cao lắp camera, vùng chồng (seam) với camera left/right            | Review bằng **2 annotator + model**, ưu tiên frame có vật thể ở rìa FOV. Kiểm tra độ chính xác của polygon `ignore_region` cho lens border.                                           |
+| left      | Che khuất bởi thân xe (ego body); vật thể ở góc chết (blind spot); ánh sáng thiếu (bóng đổ từ xe)             | Ego body che khuất dẫn đến FN; blind spot có thể bỏ sót người đi bộ.                                                                            | Calibration, vị trí camera so với thân xe, vùng chồng với front/rear                                            | Review bằng **2 annotator + teaching reference**, tập trung vào frame có vật thể gần biên giới (seam) với front/rear. Xác nhận `ignore_region` cho ego body.                          |
+| right     | Che khuất bởi gương chiếu hậu; ánh sáng chói (nếu mặt trời ở bên phải); vật thể ở rìa frame                   | Gương che khuất gây FN; ánh sáng chói dẫn đến nhầm lẫn class (ví dụ: xe trắng vs nền sáng).                                                     | Calibration, vị trí gương chiếu hậu, FOV, timestamp                                                             | Review bằng **2 annotator + model**, ưu tiên frame có ánh sáng phức tạp. Kiểm tra xóa nhãn trên gương (nếu có).                                                                       |
 
-- **Khi nào cần refresh gold set (đổi camera, calibration hoặc rule):** Khi có sự thay đổi về phần cứng cảm biến (thay loại lens/camera), thay đổi vị trí góc đặt rig xe (re-calibration), hoặc khi guideline gán nhãn được bump phiên bản mới (ví dụ từ v1.0.0 lên v1.1.0).
-- **Một ca seam/cross-camera cần policy và evidence trước khi ghép hai box:** Cần có bằng chứng đồng bộ chính xác về thời gian (timestamp microsecond), ma trận biến đổi tọa độ calibration không gian thực tế giữa hai camera liền kề, và policy hợp nhất (fusion threshold IoU trong không gian 3D/BEV). Không tự ý gộp hai box hoặc gán cùng track ID chỉ dựa trên quan sát mắt thường ở không gian ảnh 2D.
-- **Vì sao peer agreement hoặc quality report trên ảnh một camera chưa chứng minh gold set đúng cho cả bốn camera:** Bởi vì mỗi vị trí camera (trước, sau, hai bên sườn) có đặc tính quang học, trường nhìn (FOV), hướng ánh sáng và góc tiếp xúc giao thông hoàn toàn khác nhau. Sự đồng thuận trên 1 camera không thể khái quát hóa cho các ca phức tạp tại vùng giao thoa (seam) hoặc điểm mù đặc thù của các camera khác.
+- **Khi nào cần refresh gold set (đổi camera, calibration hoặc rule):**
+  - Khi **thay đổi phần cứng camera** (vị trí, góc lắp, model camera mới).
+  - Khi **cập nhật calibration** (focal length, distortion parameters thay đổi).
+  - Khi **thay đổi rule gán nhãn** (ví dụ: định nghĩa mới cho class `Bike` hoặc `Pedestrian`).
+  - Khi phát hiện **lỗi hệ thống** (ví dụ: model liên tục sai trên một loại vật thể nhất định).
+  - **Tần suất:** Refresh định kỳ (ví dụ: mỗi 6 tháng) hoặc sau khi có **≥5% conflict không giải thích được** giữa gold set và model.
+
+- **Một ca seam/cross-camera cần policy và evidence trước khi ghép hai box:**
+  - **Policy:** Chỉ ghép hai box từ hai camera **nếu có**:
+    1. **Timestamp trùng khớp** (cùng frame hoặc sai lệch ≤ 10ms).
+    2. **Calibration đầy đủ** (biết vị trí 3D tương đối giữa các camera).
+    3. **Evidence hình học**: IoU 3D ≥ 0.5 (nếu có) **hoặc** khoảng cách giữa center point 2D sau projection ≤ 20px.
+    4. **Quолy mối quan hệ**: Box trên hai camera có cùng class, kích thước tương thích (sai lệch ≤ 30%).
+  - **Không tự ghép** nếu thiếu calibration hoặc timestamp không khớp. Ghi nhận vào `30_escalation_ticket.md` nếu cần chính sách mới.
+
+- **Vì sao peer agreement hoặc quality report trên ảnh một camera chưa chứng minh gold set đúng cho cả bốn camera:**
+  - **Peer agreement trên một camera** chỉ chứng minh **sự nhất trí trong slice đó**, không đại diện cho **toàn bộ hệ thống bốn camera**.
+  - **Quality report (precision/recall) trên một camera** có thể cao, nhưng **lỗi hệ thống** (ví dụ: calibration sai, seam conflict) **không xuất hiện** trên camera đó.
+  - **Bốn camera có đặc thù riêng**: front/rear có FOV rộng về phía trước/sau, left/right bị ảnh hưởng bởi thân xe/gương. Lỗi trên camera left (ví dụ: che khuất bởi ego body) **không thể phát hiện** bằng data từ camera front.
+  - **Seam (vùng chồng)** giữa các camera đòi hỏi **kiểm chứng chéo** (cross-validation). Gold set phải cover **cả bốn camera** và **các vùng seam** để đảm bảo tính nhất quán của hệ thống.

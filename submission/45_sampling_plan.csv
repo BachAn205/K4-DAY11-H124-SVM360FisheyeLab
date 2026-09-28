@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,35,Mat do cao xe cat ngang,Lay mau cac tinh huong chay thang do thi van toc on dinh
-front,hard,15,Nguoc sang loa den pha ban dem va vat the bat ngo cat dau xe,Danh gia kha nang phat hien phanh khan cap trong dieu kien bat loi
-rear,normal,35,Diem mu sau xe khi lui trong bai do,Kiem tra phat hien xe va nguoi di bo khi lui van toc thap
-rear,hard,15,Den pha xe sau chieu thang vao camera buoi toi va troi mua nuoc ban kinh,Kiem tra kha nang chong loa va meo do giot nuoc bam
-left,normal,35,Phuong tien vuot ben trai va xe dap di song song,Giam sat lan duong va xe hai banh chay canh suon
-left,hard,15,Vung ghep seam goc truoc trai va sau trai phuong tien o mep meo cao,Kiem tra dong bo tracking va han che nhan dien trung lap o vung seam
-right,normal,35,Nguoi di bo le duong va xe may re vao le phai,Quan sat giao thong hon hop o le duong do thi
-right,hard,15,Vung che khuat boi vat the tinh tren via he va vung ghep seam phai,Kiem tra phat hien vat the khi re phai tai goc che
+front,normal,30,low,Camera trước có nhiều vật thể di chuyển; dễ quan sát; cần nhiều frame để đào tạo model.
+front,hard,20,high,Vật thể bị che khuất bởi xe phía trước; ánh sáng chói hoặc ở rìa frame.
+rear,normal,25,low,Camera sau ít vật thể hơn nhưng vẫn đủ để training.
+rear,hard,25,medium,Vật thể nhỏ/xa; bị méo do góc nhìn fisheye hoặc che khuất bởi xe phía sau.
+left,normal,25,low,Camera trái capture xe/người từ bên trái thường rõ ràng.
+left,hard,25,high,Che khuất bởi thân xe (ego body); ánh sáng thiếu hoặc vật thể ở góc méo mạnh.
+right,normal,25,low,Camera phải capture vật thể từ bên phải; tương tự trái.
+right,hard,25,high,Che khuất bởi gương chiếu hậu; ánh sáng chói (nếu mặt trời ở bên phải) hoặc vật thể ở rìa frame.

@@ -12,8 +12,8 @@
     },
     {
       "file": "00_setup/sensor_context.md",
-      "lines": 5,
-      "sha256": "fb0804baa377ba383dd7363d904d101f03ad0f5f6b56691282b1fee3b3cea53b"
+      "lines": 7,
+      "sha256": "2690277455e5d1b7fdd7117f370d28dd368e4a28cf6535d5a84bb84464354246"
     },
     {
       "file": "parking/annotations.xml",
@@ -66,7 +66,7 @@
     {
       "file": "r1_craft/selfqc.md",
       "lines": 25,
-      "sha256": "601432a2a1622ad4d087cd814ae1d5fe76bb96a670f5a911c088cf137266cbc3"
+      "sha256": "30804b7f83d81ff6b4021c2fcdf3aaa51c0f00d675f4d3f46f9eb1c5f7cd868c"
     },
     {
       "file": "r1_craft/reference.txt",
@@ -87,7 +87,7 @@
     {
       "file": "r2_qa/qa_review.md",
       "lines": 12,
-      "sha256": "d8912cc3438956c0691109bb8337940fdbc9ec5eaea5617cf5a21bb5aeb9303b"
+      "sha256": "ce6c89b09bb681549b098b33109485f6b49fa5fea304f9634ad08f8bdba0c3e5"
     },
     {
       "file": "r2_qa/qa_overlay.html",
@@ -127,7 +127,7 @@
     {
       "file": "r3_diag/zone_table.md",
       "lines": 17,
-      "sha256": "0b628f239e07227ed33dd699bf0338eee226c1148c4c6e56fd53621b14e88515"
+      "sha256": "eed6b3601954e7c8349f6c3e0f001001b0ada79f5a4611049741e0f022795003"
     },
     {
       "file": "rework/annotations-v2.xml",
@@ -148,47 +148,47 @@
     {
       "file": "findings.csv",
       "lines": 37,
-      "sha256": "35f655d84cf3f351b2f48b5a8388a4d61b64b948e07c2468f63e743dfee91154"
+      "sha256": "73ba977482a8d6964ae715bb190526483163a2727d6b09f197e612c736c506f5"
     },
     {
       "file": "10_error_card.md",
       "lines": 39,
-      "sha256": "3892c9ee5fcd8a10d7b29a1d390ad2796e8d88ab7f1bed9e30a8e272cfdfb419"
+      "sha256": "6c3942cf0befd9893e8793760bf11515066452ccf1d5fd158d1a89f55b8fb667"
     },
     {
       "file": "20_guideline_patch.md",
       "lines": 7,
-      "sha256": "78c89d7d1fbe03acd3384c716505b5087bb638980c5e3685d09bc53bcdf70069"
+      "sha256": "10c02469c21cef2833874a3e6def1768e1fb18b81ad3890479cc81eb48aacb79"
     },
     {
       "file": "30_escalation_ticket.md",
       "lines": 9,
-      "sha256": "9a474794e2cc52e39f5c71c4007bc308c4db4f01d86233b11b8376301cb72501"
+      "sha256": "e678c759f108d810842be3c2128fdcab064a767e4588dad627e75fd478d3a759"
     },
     {
       "file": "40_decision_log.csv",
       "lines": 5,
-      "sha256": "03127aae475aaa60e42955c817c4ce27b1c7e05054e7c96214d337ccad162b7a"
+      "sha256": "5e331151e87b051208c4cfdcdf7715df98b16399fd33336b78c17f3bd6f048fb"
     },
     {
       "file": "45_review_plan.md",
       "lines": 18,
-      "sha256": "7ec49407da8ce96b29794ccd0eb1bad07e9f59325961d7b14ee35cbff17ec844"
+      "sha256": "2d34f935240c7561febc880a41f55e824358928355a03afff192f6f5dac74138"
     },
     {
       "file": "45_sampling_plan.csv",
       "lines": 9,
-      "sha256": "16a595dc38992b93969a9f8e547cf4243a2b7fc8a144c915f5e3cb0f03a8adde"
+      "sha256": "2c57b3a6bf9f623db58319a1cdef49f3737d0520474d3bd9522c93795f6a9d36"
     },
     {
       "file": "46_gold_set_plan.md",
-      "lines": 18,
-      "sha256": "81943c7348cde8d54d8cccb67aa563c0f0422872296319e351c2a2a542ae4898"
+      "lines": 35,
+      "sha256": "827c3669f9d1e22300938ecac1fb1c81a58af73c855c79ac272da25680a70689"
     },
     {
       "file": "50_exit_ticket.md",
       "lines": 18,
-      "sha256": "c5f008fe4179b7febb8f6fa1dbd57efcdd702b3f09cb973e1046ce1d0333b732"
+      "sha256": "add794985cfcf0b39ece4d8c0262218569138d78874e8a7f9583a84becfa7dca"
     }
   ],
   "failed_gates": []
