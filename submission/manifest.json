@@ -18,7 +18,7 @@
     {
       "file": "parking/annotations.xml",
       "lines": 57,
-      "sha256": "bda2ef4e6b65d2217c4543e0fe1cf2738b3cb6ed1678ff687f2603c004063470"
+      "sha256": "58790d276479b7c15d0ec5b67c337a013472e9b645bbfabd2ddd60bcab0cad05"
     },
     {
       "file": "parking/observations.md",
@@ -178,7 +178,7 @@
     {
       "file": "45_sampling_plan.csv",
       "lines": 9,
-      "sha256": "2c57b3a6bf9f623db58319a1cdef49f3737d0520474d3bd9522c93795f6a9d36"
+      "sha256": "bf4d9652540b8f7ccff911c0b131d30a6ca6373287723fa87d794adfab2a3e00"
     },
     {
       "file": "46_gold_set_plan.md",
