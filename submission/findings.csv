@@ -1,1 +1,37 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+calib,C0,adasind_019560.jpg,L1,na,SPURIOUS,E1_annotator_error,P1,annotator,R03,Box Pedestrian ve rieng cho nguoi dang lai xe may,rework,v1.0.0,Theo R03 rider tren xe hai banh gop chung thanh mot box Bike
+calib,C0,adasind_019560.jpg,L5,na,SPURIOUS,E1_annotator_error,P2,annotator,R01,Box Bike nho ve trung de len xe dap nguoi ao vang,rework,v1.0.0,Box trung lap khong can thiet
+calib,C0,adasind_019560.jpg,L6,na,SPURIOUS,E1_annotator_error,P2,annotator,R01,Chi tiet nho trong quan bi che khuat duoi nguong H=40,rework,v1.0.0,Vat duoi nguong kich thuoc khong hop le
+calib,C0,adasind_019560.jpg,L9,na,SPURIOUS,E1_annotator_error,P1,annotator,R04,Xe ba banh cho hang bi gan nhan thanh Truck,rework,v1.0.0,R04 quy dinh xe 3 banh cho hang gan ThreeWheeler
+calib,C0,adasind_019560.jpg,R5,na,MISSING,E1_annotator_error,P1,annotator,R04,Thieu box ThreeWheeler do gan nham sang Truck o L9,rework,v1.0.0,Sua L9 thanh ThreeWheeler se khop R5
+r2_qa,B2-dense,adasind_069450.jpg,L1,L_only,SPURIOUS,,P1,qa,R01,Box Car cao H=22.4px duoi nguong H=40,rework,v1.0.0,QA phat hien box duoi nguong
+r2_qa,B2-dense,adasind_069450.jpg,L7,L_only,SPURIOUS,,P1,qa,R01,Box Pedestrian cao H=22.1px duoi nguong H=40,rework,v1.0.0,QA phat hien box duoi nguong
+r2_qa,B2-dense,adasind_117120.jpg,L9,L_only,SPURIOUS,,P1,qa,R01,Box Car cao H=21.9px duoi nguong H=40,rework,v1.0.0,QA phat hien box duoi nguong
+r2_qa,B2-dense,adasind_062370.jpg,L7,L_only,ATTRIBUTE,,P2,qa,R05,ThreeWheeler o mep can ra soat truncated,rework,v1.0.0,Kiem tra lai thuoc tinh truncated
+r1_craft,B2-dense,adasind_062370.jpg,L7+R1,na,ATTRIBUTE,E1_annotator_error,P2,annotator,R05,Thuoc tinh truncated lech voi reference,rework,v1.0.0,Dieu chinh lai truncated
+r1_craft,B2-dense,adasind_062370.jpg,R7,na,MISSING,E1_annotator_error,P1,annotator,R01,Bo sot doi tuong ThreeWheeler nho o sau,rework,v1.0.0,Can bo sung box theo reference
+r1_craft,B2-dense,adasind_062370.jpg,R8,na,MISSING,E1_annotator_error,P1,annotator,R01,Bo sot doi tuong Bike phia xa,rework,v1.0.0,Can bo sung box
+r1_craft,B2-dense,adasind_069450.jpg,L5+R2,na,WRONG_CLASS,E1_annotator_error,P1,annotator,R04,Sai class giua ThreeWheeler va Car,rework,v1.0.0,Chinh lai class dung quy dinh
+r1_craft,B2-dense,adasind_117120.jpg,L4,na,SPURIOUS,E1_annotator_error,P1,annotator,R01,Box Pedestrian thua khong hop le,rework,v1.0.0,Xoa box thua
+r3_diag,B2-dense,adasind_062370.jpg,L2+R6,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,Model bo sot ThreeWheeler o vung bi meo quang hoc,keep_with_reason,v1.0.0,Model can them du lieu fisheye
+r3_diag,B2-dense,adasind_062370.jpg,L7+R1,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,Model bo sot ThreeWheeler o mep bien,keep_with_reason,v1.0.0,Do lech mien du lieu o mep kinh
+r3_diag,B2-dense,adasind_062370.jpg,L1+R5,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,Model bo sot xe ThreeWheeler giua khung hinh,keep_with_reason,v1.0.0,Can cai thien recall cua model
+r3_diag,B2-dense,adasind_062370.jpg,R7,R_only,MISSING,E1_annotator_error,P1,annotator,R01,Annotator va model deu bo sot vat the o xa,rework,v1.0.0,Can bo sung box o buoc rework
+r3_diag,B2-dense,adasind_062370.jpg,R8,R_only,MISSING,E1_annotator_error,P1,annotator,R01,Annotator va model bo sot Bike nho,rework,v1.0.0,Can bo sung box
+r3_diag,B2-dense,adasind_062370.jpg,M3,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model du doan nham vat the ao o le duong,keep_with_reason,v1.0.0,Do nhieu boi canh ngoai mien
+r3_diag,B2-dense,adasind_062370.jpg,M4,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model phat hien ao giua bui cay,keep_with_reason,v1.0.0,Model domain shift
+r3_diag,B2-dense,adasind_062370.jpg,M5,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Box ao do bong phan chieu tren duong,keep_with_reason,v1.0.0,Model nham bong xe
+r3_diag,B2-dense,adasind_062370.jpg,M8,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Box ao o vung vanh tron fisheye,keep_with_reason,v1.0.0,Vung bien meo cao
+r3_diag,B2-dense,adasind_062370.jpg,M10,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Box ao phan mem cua model,keep_with_reason,v1.0.0,FP cua model dong bang
+r3_diag,B2-dense,adasind_069450.jpg,L4+R1,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,Model bo sot Pedestrian di bo ven duong,keep_with_reason,v1.0.0,Model bo sot nguoi di bo
+r3_diag,B2-dense,adasind_069450.jpg,L5+M7,LM_noR,SPURIOUS,E0_reference_defect,P1,qa,R04,Nguoi va model deu thay xe nhung reference thieu,escalate,v1.0.0,Kien nghi bo sung vao reference
+r3_diag,B2-dense,adasind_069450.jpg,R2,R_only,MISSING,E1_annotator_error,P1,annotator,R04,Sai class dan den missing o reference matching,rework,v1.0.0,Can sua class o rework
+r3_diag,B2-dense,adasind_069450.jpg,M5,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Box ao cua model tren via he,keep_with_reason,v1.0.0,False positive model
+r3_diag,B2-dense,adasind_117120.jpg,L1+R2,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,Model bo sot Car ben trai,keep_with_reason,v1.0.0,Model fn
+r3_diag,B2-dense,adasind_117120.jpg,L5+R4,LR_noM,MISSING,E4_model_domain,P1,ai_team,R02,Model bo sot Bus o giua,keep_with_reason,v1.0.0,Model fn
+r3_diag,B2-dense,adasind_117120.jpg,L4,L_only,SPURIOUS,E1_annotator_error,P1,annotator,R01,Box Pedestrian thua do annotator ve,rework,v1.0.0,Xoa o rework
+r3_diag,B2-dense,adasind_117120.jpg,M1,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model du doan ao o mep tren,keep_with_reason,v1.0.0,Meo fisheye
+r3_diag,B2-dense,adasind_117120.jpg,M6,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model ao o phia xa,keep_with_reason,v1.0.0,False positive
+r3_diag,B2-dense,adasind_117120.jpg,M7,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model ao do cay coi,keep_with_reason,v1.0.0,False positive
+r3_diag,B2-dense,adasind_117120.jpg,M8,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model ao do coc rao,keep_with_reason,v1.0.0,False positive
+r3_diag,B2-dense,adasind_117120.jpg,M10,M_only,SPURIOUS,E4_model_domain,P2,ai_team,R02,Model ao o ria anh,keep_with_reason,v1.0.0,False positive

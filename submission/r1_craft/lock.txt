@@ -1,0 +1,9 @@
+round: r1_craft
+slice: B2-dense
+sha256: 8755e75e5f6191b967c89feb605801749682c5e6c8fe340e770f9c9a3e4f89ad
+code: 8755-E75E
+locked_at: 2026-09-28T17:18:59+07:00
+shapes: box=24, polygon=6
+prefill_kept: 4
+prefill_edited: 0
+new: 20
