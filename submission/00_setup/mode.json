@@ -1,21 +1,15 @@
 {
-  "members": [
-    "Bach-Khanh-An"
-  ],
+  "members": ["an", "duc", "khai"],
   "assignments": {
-    "Bach-Khanh-An": "B2-dense"
+    "an": "B2-mid",
+    "duc": "B3-center",
+    "khai": "B4-mid"
   },
-  "self": "Bach-Khanh-An",
-  "slice": "B2-dense",
+  "self": "khai",
+  "slice": "B4-mid",
   "degrade": [],
-  "current_slice": "B2-dense",
+  "current_slice": "B4-mid",
   "support_prefill": false,
   "support_slice": "",
-  "prefill_box_ids": [
-    "adasind_062370.jpg:1",
-    "adasind_062370.jpg:2",
-    "adasind_062370.jpg:3",
-    "adasind_062370.jpg:4",
-    "adasind_062370.jpg:5"
-  ]
+  "prefill_box_ids": ["adasind_249480.jpg:1"]
 }
