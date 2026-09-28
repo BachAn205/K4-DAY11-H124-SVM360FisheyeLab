@@ -5,8 +5,10 @@ giải thích dữ liệu thật bạn vừa làm; nó không thay cho kế ho�
 
 | Lát cắt / frame | Số ca và loại lỗi | Vì sao review trước | Bằng chứng cần giữ |
 |---|---|---|---|
-| `adasind_069450.jpg` (Vùng hậu cảnh xa) | 3 ca (2 SPURIOUS box dưới ngưỡng H=40, 1 LM_noR xung đột reference) | Lỗi vi phạm ngưỡng kích thước R01 và phát hiện nghi vấn thiếu sót của reference (E0) | Screenshot và tọa độ bounding box so sánh giữa L, R và M |
-| `adasind_062370.jpg` (Vùng rìa kính méo cao) | 4 ca (1 ATTRIBUTE truncated, 3 MISSING model do méo fisheye) | Vùng biên thấu kính mắt cá có tỷ lệ model bỏ sót và gãy nhãn cao nhất do barrel distortion | Bảng đối chiếu `zone_table.md` và file `compare.html` |
+| Lát cắt / frame | Số ca và loại lỗi | Vì sao review trước | Bằng chứng cần giữ |
+|---|---|---|---|
+| `adasind_086220.jpg` (Vùng rìa/mid xung đột) | 3 ca (1 SPURIOUS box dưới ngưỡng H=40, 1 ATTRIBUTE truncated rìa, 1 LM_noR xung đột reference) | Lỗi vi phạm ngưỡng kích thước R01, sai thuộc tính viền biên R05 và phát hiện nghi vấn thiếu sót của reference (E0) | Screenshot `adasind_086220_escalation.jpg` và bảng đối chiếu L vs M vs R |
+| `adasind_060000.jpg` (Vùng trung tâm/hậu cảnh) | 3 ca (1 SPURIOUS box H=29.7px, 2 MISSING do khoảng cách xa) | Vùng trung tâm có mật độ tập trung cao, dễ vi phạm ngưỡng lọc nhiễu nhỏ hơn 40px và bỏ sót đối tượng nhỏ xa | Bảng đối chiếu `compare.md`, `zone_table.md` và file `compare.html` |
 
 Giới hạn của kết luận từ ba frame ADASIND: Bộ dữ liệu chỉ gồm 3 frame trong cùng một điều kiện thời tiết ban ngày, không đủ tính khái quát thống kê cho toàn bộ hệ thống SVM 360 độ gồm 4 camera đa hướng.
 

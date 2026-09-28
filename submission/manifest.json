@@ -7,8 +7,8 @@
     },
     {
       "file": "00_setup/mode.json",
-      "lines": 21,
-      "sha256": "06d1141b048acdb793c0729bcbf49db6f6d2d647442649015a76330c36d41f52"
+      "lines": 23,
+      "sha256": "7c4863f5c8c4f5c4d5510a135f19fe0ea6a869c69462de0ee4cb1b7b3e29ef7c"
     },
     {
       "file": "00_setup/sensor_context.md",
@@ -54,101 +54,101 @@
     },
     {
       "file": "r1_craft/annotations.xml",
-      "lines": 384,
-      "sha256": "8755e75e5f6191b967c89feb605801749682c5e6c8fe340e770f9c9a3e4f89ad"
+      "lines": 404,
+      "sha256": "8496e40ed1f8c2961e95d83477728845db60d8b4cf0960e3a443e5cd3b6384a0"
     },
     {
       "file": "r1_craft/lock.txt",
-      "lines": 9,
-      "sha256": "deb1c2a393567b6f3dd47c21d5bdbae65faa073e275448ce1096a3a4e2224767",
-      "locked_at": "2026-09-28T17:18:59+07:00"
+      "lines": 19,
+      "sha256": "2f4c62c0e0b52ed9ac15c3e2b31a7091044e84e21b59d2c37d00ee49cd829e2c",
+      "locked_at": "2026-09-28T18:55:11+07:00"
     },
     {
       "file": "r1_craft/selfqc.md",
-      "lines": 25,
-      "sha256": "30804b7f83d81ff6b4021c2fcdf3aaa51c0f00d675f4d3f46f9eb1c5f7cd868c"
+      "lines": 28,
+      "sha256": "5766b4715e5b59c3a0f3b24e0d0382d83113b406cb425e9ad746ce6f8e2db54f"
     },
     {
       "file": "r1_craft/reference.txt",
       "lines": 3,
-      "sha256": "43b50fe2ce5ca64da5b708543aadf56a5ee2f6a1e6a26db2e4f4a74a6457fa43",
+      "sha256": "93212aa62ad1ecfa0319caa59b4a9b65dbeec9f118e30dbac0c464c8e2cd8475",
       "lock_before_reveal": true
     },
     {
       "file": "r1_craft/compare.md",
-      "lines": 20,
-      "sha256": "4d019464d9bd2c73fd0bdb5747f2dbf064c640819499e802c06fbe59eeac4a65"
+      "lines": 24,
+      "sha256": "bf23949f45dfea794e45f63739175efead616d92ea51a382eb706e5ad2e5919f"
     },
     {
       "file": "r1_craft/compare.html",
-      "lines": 90,
-      "sha256": "542e2db4e37a0dc11c99775311d2eec05ede80995dc5b30000da255664faad87"
+      "lines": 94,
+      "sha256": "28ee3185130ff38057e2d1cfaa970844df79b9aa0f14c67c3048d71875f4374b"
     },
     {
       "file": "r2_qa/qa_review.md",
       "lines": 12,
-      "sha256": "ce6c89b09bb681549b098b33109485f6b49fa5fea304f9634ad08f8bdba0c3e5"
+      "sha256": "4c3d0c514ccc6a75b652a3b401fbcfd0c50136abb935825adf490e5768fb4c49"
     },
     {
       "file": "r2_qa/qa_overlay.html",
-      "lines": 50,
-      "sha256": "18ede65bd90d1c147fd66561052eca7ca5f7c84cecc6e6b772998209d0abf727"
+      "lines": 54,
+      "sha256": "44d73e9e8a03a74b0b5e35d70a29c26f820475bd9fc28cdfe4f01c119dbea30b"
     },
     {
       "file": "r3_diag/local_quality.md",
-      "lines": 51,
-      "sha256": "aa2bb3e28d0af59fcdc46ba113389cb66cc1044c31382a7948c97c36cfcfee9c"
+      "lines": 49,
+      "sha256": "c28876709d747e465744cabdd5b9096e251bc933354f3ad78966f07595eee676"
     },
     {
       "file": "r3_diag/local_quality.json",
-      "lines": 274,
-      "sha256": "c69e621bdbe642afeca76a414019b42f418acac97e1c7ac987ce8874b59a09b9"
+      "lines": 293,
+      "sha256": "fb0302db6c248f9b973335a8a53387abf9fb715058299c0d419a5df186188e6a"
     },
     {
       "file": "r3_diag/local_quality_conflicts.csv",
-      "lines": 7,
-      "sha256": "6ccb6f60a5db961a7aa7a2dfce52057b1c8052d9cb38a7a038fae8cca09dc220"
+      "lines": 12,
+      "sha256": "641d5ee2d16fdfea44df44c78e1abcb37d4e5d7d9f7ce1021a5560653f98939b"
     },
     {
       "file": "r3_diag/local_quality_confusion.csv",
-      "lines": 8,
-      "sha256": "444ecd4496cd6099a321a2e650dc93a255913dc4a729eb09264bcd7b91d34bc9"
+      "lines": 7,
+      "sha256": "42eea77a4da5e2c12afca7e529b29dd6bfd1b37b7cadba871c9921fb3777ee9a"
     },
     {
       "file": "r3_diag/model_compare.md",
-      "lines": 47,
-      "sha256": "3d7bbce0f31c48ff28d1b1872e8f464ad6c3df2cf68154af47279127cbf31bbf"
+      "lines": 55,
+      "sha256": "3bf6a4c17b2f0780380a221f9c928246fd9e286e0fa6eedebc7b6a769bdf31f4"
     },
     {
       "file": "r3_diag/model_compare.html",
-      "lines": 136,
-      "sha256": "b21be274877e3b20ade5b13c771ccafb9d5b2007fd911dc529879d4f115a06ca"
+      "lines": 148,
+      "sha256": "58aafde704a1e93c2bbe4c710e04cd17ea6c11242eed0ce48213d810f533e622"
     },
     {
       "file": "r3_diag/zone_table.md",
       "lines": 17,
-      "sha256": "eed6b3601954e7c8349f6c3e0f001001b0ada79f5a4611049741e0f022795003"
+      "sha256": "45e388ebe68486ce77375111e4bf51a835aaa1515589e43c36e3489c08d90319"
     },
     {
       "file": "rework/annotations-v2.xml",
-      "lines": 359,
-      "sha256": "431dae600c36d0e1fd74699d8e46c8bbdbfe339c33bdc75048ea78b286e57324"
+      "lines": 369,
+      "sha256": "0f65ae9a7588f2fd76b0f14e8e7e6ee3dbf02a3e082560440034f8e8edda0951"
     },
     {
       "file": "rework/lock2.txt",
-      "lines": 9,
-      "sha256": "f7dbee01d43d55d25127a4730a6b58f69d35c8c310afd278e28fd55b38838117",
-      "locked_at": "2026-09-28T17:26:26+07:00"
+      "lines": 19,
+      "sha256": "438e8ddd24809990fd4e22cdd3f39fbedb0f150cf6a8155111529657244cfe1c",
+      "locked_at": "2026-09-28T18:57:59+07:00"
     },
     {
       "file": "rework/delta.md",
-      "lines": 27,
-      "sha256": "d7a76c8e04083b11e5b842e8a1d9cff376469fb2910c32d6f0569c84502a2f97"
+      "lines": 33,
+      "sha256": "e7370d955c759b7a9420aac37fdafeb65857b844f9162cc29add3fb5c1724e60"
     },
     {
       "file": "findings.csv",
-      "lines": 37,
-      "sha256": "73ba977482a8d6964ae715bb190526483163a2727d6b09f197e612c736c506f5"
+      "lines": 52,
+      "sha256": "54e7265ea24723080d532e9fe478b4246d1466f826660b7b036a565a861f888a"
     },
     {
       "file": "10_error_card.md",
@@ -163,7 +163,7 @@
     {
       "file": "30_escalation_ticket.md",
       "lines": 9,
-      "sha256": "e678c759f108d810842be3c2128fdcab064a767e4588dad627e75fd478d3a759"
+      "sha256": "313c783fe67e83bb44a6084f5487c43cce3419c8e748844e37fc9b462ca0fc92"
     },
     {
       "file": "40_decision_log.csv",
@@ -172,8 +172,8 @@
     },
     {
       "file": "45_review_plan.md",
-      "lines": 18,
-      "sha256": "2d34f935240c7561febc880a41f55e824358928355a03afff192f6f5dac74138"
+      "lines": 20,
+      "sha256": "abb135ac850e3da787f7c6e43e6152d03327fcb5438e4be2974c5bcaf718e3ca"
     },
     {
       "file": "45_sampling_plan.csv",
